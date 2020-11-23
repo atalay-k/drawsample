@@ -1,0 +1,53 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# drawsample
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of drawsample is to ...
+
+## Installation
+
+You can install the released version of drawsample from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("drawsample")
+```
+
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("atalay-k/drawsample",dependencies = TRUE,upgrade = "never")
+```
+## Example
+
+Same basic examples for the usage:
+
+```{r example}
+library(drawsample)
+## basic example code
+# Draw a sample based on Score_1(from negatively skewed to normal)
+ draw_sample(dist=example_data[,c(1,2)],n=200,skew = 0,kurts = 0,
+ output_name = c("sample", "1"))
+# Draw a sample based on Score_2 (from negatively skewed to positively skewed)
+ draw_sample(dist=example_data[,c(1,3)],n=200,skew = 1,kurts = 1,
+ output_name = c("sample", "2"))
+# Draw a sample based on Score_2 (from negatively skewed to positively skewed with replacement)
+ draw_sample(dist=example_data[,c(1,3)],n=200,skew = 0.5,kurts = 0.4,
+ replacement=TRUE,output_name = c("sample", "3"))
+```
