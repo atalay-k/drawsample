@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![Travis build
+status](https://travis-ci.com/atalay-k/drawsample.svg?branch=master)](https://travis-ci.com/atalay-k/drawsample)
 <!-- badges: end -->
 
 The goal of drawsample is to …
@@ -42,23 +44,23 @@ library(drawsample)
     #> $desc
     #>               n  mean   sd min max  skew kurtosis
     #> population 5000 14.61 4.90   0  25 -0.40    -0.35
-    #> reference   200 13.61 4.04   0  25 -0.04    -0.04
-    #> sample      200 14.12 4.08   0  25 -0.12     0.05
+    #> reference   200 11.64 4.22   0  25  0.02     0.00
+    #> sample      200 12.15 4.19   1  25  0.07    -0.07
     #> 
     #> $sample
     #> # A tibble: 200 x 2
     #>       id     x
     #>    <dbl> <dbl>
-    #>  1  2538     0
-    #>  2  4739     4
-    #>  3  3851     5
-    #>  4  2397     5
-    #>  5  3750     5
-    #>  6  4039     7
-    #>  7  1730     8
-    #>  8  1812     8
-    #>  9   651     7
-    #> 10  2551     8
+    #>  1  4371     1
+    #>  2  3087     2
+    #>  3  1197     2
+    #>  4  3814     2
+    #>  5   170     4
+    #>  6  4887     3
+    #>  7  4847     4
+    #>  8  4215     6
+    #>  9  2878     6
+    #> 10  1003     6
     #> # ... with 190 more rows
     #> 
     #> $graph
@@ -76,23 +78,23 @@ library(drawsample)
     #> $desc
     #>               n  mean   sd min max  skew kurtosis
     #> population 5000 12.78 5.22   0  25 -0.17    -0.88
-    #> reference   200  7.21 5.11   0  25  1.04     0.98
-    #> sample      200  7.76 5.08   0  25  0.99     0.76
+    #> reference   200  5.98 4.58   0  25  0.99     1.01
+    #> sample      200  6.49 4.62   0  25  0.89     0.75
     #> 
     #> $sample
     #> # A tibble: 200 x 2
     #>       id     x
     #>    <dbl> <dbl>
-    #>  1  3072     1
-    #>  2  4912     1
-    #>  3  1483     1
-    #>  4  1856     1
-    #>  5   948     1
-    #>  6  3007     1
-    #>  7  3268     2
-    #>  8     7     2
-    #>  9   478     2
-    #> 10  2855     2
+    #>  1  3752     1
+    #>  2  1219     2
+    #>  3  4496     1
+    #>  4  1358     1
+    #>  5  2330     1
+    #>  6  4270     2
+    #>  7   218     2
+    #>  8  4929     2
+    #>  9  2383     2
+    #> 10  4805     1
     #> # ... with 190 more rows
     #> 
     #> $graph
@@ -110,23 +112,23 @@ library(drawsample)
     #> $desc
     #>               n  mean   sd min max  skew kurtosis
     #> population 5000 12.78 5.22   0  25 -0.17    -0.88
-    #> reference   200 10.04 4.38   0  25  0.48     0.44
-    #> sample      200 10.55 4.41   0  25  0.47     0.45
+    #> reference   200  5.86 4.21   0  25  0.47     0.38
+    #> sample      200  6.36 4.13   0  25  0.42     0.36
     #> 
     #> $sample
     #> # A tibble: 200 x 2
     #>       id     x
     #>    <dbl> <dbl>
-    #>  1  1728     2
-    #>  2  2538     0
-    #>  3  4509     2
-    #>  4  3896     1
-    #>  5  2855     2
-    #>  6  4372     4
-    #>  7  4870     3
-    #>  8  4895     4
-    #>  9   456     3
-    #> 10  4404     3
+    #>  1  2112     1
+    #>  2  3896     1
+    #>  3  3007     1
+    #>  4   400     2
+    #>  5  4570     1
+    #>  6  2667     1
+    #>  7  3896     1
+    #>  8  4433     1
+    #>  9  3593     1
+    #> 10  4280     2
     #> # ... with 190 more rows
     #> 
     #> $graph

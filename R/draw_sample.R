@@ -6,8 +6,10 @@
 #' @param n            numeric: desired sample size
 #' @param skew         numeric: the skewness value
 #' @param kurts        numeric: the kurtosis value
-#' @param replacement  logical:Sample with or without replacement? (default is FALSE).
-#' @param output_name character: a vector of two components. The first component is the name of the output file,
+#' @param replacement  logical:Sample with or without replacement?
+#' (default is FALSE).
+#' @param output_name character: a vector of two components.
+#'                    The first component is the name of the output file,
 #'                    user can change the second component.
 #'
 #' @import dplyr
@@ -20,17 +22,20 @@
 #' @importFrom utils capture.output
 #' @return This function returns a \code{list} including following:
 #' \itemize{
-#' \item a matrix: Descriptive statistics of the given data, the reference vector and the sample.
+#' \item a matrix: Descriptive statistics of the given data,
+#'                 the reference vector and the sample.
 #' \item a data frame: The id's and scores of the sample
 #' \item graph: Histograms for the “data” and the “sample”
 #' }
 #' @details
-#' The execution of the function may take some time since it tries to obtain the specified value for skewness and kurtosis.
+#' The execution of the function may take some time since it tries to obtain
+#' the specified value for skewness and kurtosis.
 #' @references
-#' Fleishman AI (1978). A Method for Simulating Non-normal Distributions. Psychometrika, 43, 521-532. \doi{10.1007/BF02293811}.
+#' Fleishman AI (1978). A Method for Simulating Non-normal Distributions.
+#' Psychometrika, 43, 521-532. \doi{10.1007/BF02293811}.
 #'
-#' Fialkowski, A. C.  (2018). SimMultiCorrData: Simulation of Correlated Data with Multiple
-#' Variable Types.  R package version 0.2.2. Retrieved from
+#' Fialkowski, A. C.  (2018). SimMultiCorrData: Simulation of Correlated Data
+#' with Multiple #' Variable Types.  R package version 0.2.2. Retrieved from
 #' https://cran.r-project.org/web/packages/SimMultiCorrData/index.html
 #' @export
 #' @examples
@@ -43,7 +48,8 @@
 #'# Draw a sample based on Score_2 (from negatively skewed to positively skewed)
 #'# draw_sample(dist=example_data[,c(1,3)],n=200,skew = 1,kurts = 1,
 #'# output_name = c("sample", "2"))
-#'# Draw a sample based on Score_2 (from negatively skewed to positively skewed with replacement)
+#'# Draw a sample based on Score_2 (from negatively skewed to positively skewed
+#'# with replacement)
 #'# draw_sample(dist=example_data[,c(1,3)],n=200,skew = 0.5,kurts = 0.4,
 #'# replacement=TRUE,output_name = c("sample", "3"))
 #'}
@@ -53,7 +59,7 @@ draw_sample <-  function(dist,n,skew,kurts,
 
   # rename the data
   skew <- round(skew,1)
-  # kurts <- round(kurts,1)
+  kurts <- round(kurts,1)
   names(dist) <- c("id","x")
   # extract x column
   x <- dist$x
@@ -72,14 +78,18 @@ draw_sample <-  function(dist,n,skew,kurts,
 
 
   if(skew %in% constants_table$Skew == FALSE){
-    stop("No valid power method constants could be found for the specified values. Change the values")
-  } else if (skew %in% constants_table$Skew == TRUE &  kurts %in%  constants_table[constants_table$Skew==skew,]$Kurtosis == FALSE){
-    stop("No valid power method constants could be found for the specified values. Change the values")
+    stop("No valid power method constants could be found for
+          the specified values. Change the values")
+  }else if (skew %in% constants_table$Skew == TRUE &
+  kurts %in%  constants_table[constants_table$Skew==skew,]$Kurtosis == FALSE){
+    stop("No valid power method constants could be found for
+           the specified values.Change the values")
   }
 
   reference_v3 <- NULL
 
-  # conduct Fleishman's power method for the specified skewness and standardized kurtosis
+  # conduct Fleishman's power method for the specified
+  # skewness and standardized kurtosis
   repeat{
     for( i in 1:dim(constants_table)[1]){
       #  random generation for the normal distribution
@@ -120,7 +130,8 @@ draw_sample <-  function(dist,n,skew,kurts,
   control <- sum(x_n>= x_counts)
   if(control!=length(x_counts)){
     if(replacement==FALSE){
-      stop("Cannot take a sample form that data without replacement.\n Please change replacement=TRUE")
+      stop("Cannot take a sample form that data without replacement.
+           Please change replacement=TRUE")
     }
   }
 
@@ -131,17 +142,17 @@ draw_sample <-  function(dist,n,skew,kurts,
   ID_list_2 <- list()
 
   for(i in 1:n_break){
-    new_count = 0
-    j = 0
+    new_count <- 0
+    j <- 0
     while(new_count < x_counts[i]){
-      j = j + 1
+      j <- j + 1
       IDx <- dplyr::filter(dist2,x_v1==i)
       IDx <- dplyr::sample_n(IDx,1)
       if(replacement==FALSE){
         dist2 <- dplyr::filter(dist2,id!=IDx$id)
       } else{ dist2 <- dist2}
-      new_count = new_count + 1
-      new_sample[i,j] = IDx$x
+      new_count <- new_count + 1
+      new_sample[i,j] <- IDx$x
       ID_list[i,j]<-   IDx$id
     }
     new_sample_2[[i]] <-  stats::na.omit(new_sample[i,])
@@ -169,14 +180,18 @@ draw_sample <-  function(dist,n,skew,kurts,
   # histogram(~x|type,data=result,xlab="Score")
 
   # to capture the graph
-  graph <-      lattice::histogram(~x|type,data=result,xlab="Score",nint = n_break,
-                                   scales = list(x = list(tick.number = 5,relation = "free")))
+  graph <-      lattice::histogram(~x|type,data=result,xlab="Score",
+                 nint = n_break,
+                scales = list(x = list(tick.number = 5,relation = "free")))
 
-  lattice::trellis.device(device="png", filename=paste( output_name[1], wd,".png", sep = ""))
+  lattice::trellis.device(device="png",
+           filename=paste( output_name[1], wd,".png", sep = ""))
   print(graph)
   grDevices::dev.off()
 
-  desc <-  rbind(psych::describe(x), psych::describe(reference_v4),psych::describe(S1$x))[,c(2:4,8:9,11:12)]
+  desc <-  rbind(psych::describe(x),
+                 psych::describe(reference_v4),
+                 psych::describe(S1$x))[,c(2:4,8:9,11:12)]
   rownames(desc) <- c("population","reference","sample")
   # output with three components
   output <- list(desc =desc ,

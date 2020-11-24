@@ -1,5 +1,6 @@
 #' @title Example Data
-#' @description The example data set  is made of 500 subjects ids and  total scores from two different tests
+#' @description The example data set  is made of 500 subjects ids and
+#' total scores from two different tests.
 #' @usage
 #' data(example_data)
 #' @format A \code{data.frame} with 3 columns, which are

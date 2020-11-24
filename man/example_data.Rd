@@ -16,6 +16,7 @@ A \code{data.frame} with 3 columns, which are
 data(example_data)
 }
 \description{
-The example data set  is made of 500 subjects ids and  total scores from two different tests
+The example data set  is made of 500 subjects ids and
+total scores from two different tests.
 }
 \keyword{datasets}

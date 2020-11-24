@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # drawsample
 
 <!-- badges: start -->
+[![Travis build status](https://travis-ci.com/atalay-k/drawsample.svg?branch=master)](https://travis-ci.com/atalay-k/drawsample)
 <!-- badges: end -->
 
 The goal of drawsample is to ...
