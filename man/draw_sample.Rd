@@ -22,15 +22,18 @@ draw_sample(
 
 \item{kurts}{numeric: the kurtosis value}
 
-\item{replacement}{logical:Sample with or without replacement? (default is FALSE).}
+\item{replacement}{logical:Sample with or without replacement?
+(default is FALSE).}
 
-\item{output_name}{character: a vector of two components. The first component is the name of the output file,
+\item{output_name}{character: a vector of two components.
+The first component is the name of the output file,
 user can change the second component.}
 }
 \value{
 This function returns a \code{list} including following:
 \itemize{
-\item a matrix: Descriptive statistics of the given data, the reference vector and the sample.
+\item a matrix: Descriptive statistics of the given data,
+                the reference vector and the sample.
 \item a data frame: The id's and scores of the sample
 \item graph: Histograms for the “data” and the “sample”
 }
@@ -39,7 +42,8 @@ This function returns a \code{list} including following:
 A function to sample data with desired properties.
 }
 \details{
-The execution of the function may take some time since it tries to obtain the specified value for skewness and kurtosis.
+The execution of the function may take some time since it tries to obtain
+the specified value for skewness and kurtosis.
 }
 \examples{
 # Example data provided with package
@@ -51,15 +55,17 @@ data(example_data)
 # Draw a sample based on Score_2 (from negatively skewed to positively skewed)
 # draw_sample(dist=example_data[,c(1,3)],n=200,skew = 1,kurts = 1,
 # output_name = c("sample", "2"))
-# Draw a sample based on Score_2 (from negatively skewed to positively skewed with replacement)
+# Draw a sample based on Score_2 (from negatively skewed to positively skewed
+# with replacement)
 # draw_sample(dist=example_data[,c(1,3)],n=200,skew = 0.5,kurts = 0.4,
 # replacement=TRUE,output_name = c("sample", "3"))
 }
 }
 \references{
-Fleishman AI (1978). A Method for Simulating Non-normal Distributions. Psychometrika, 43, 521-532. \doi{10.1007/BF02293811}.
+Fleishman AI (1978). A Method for Simulating Non-normal Distributions.
+Psychometrika, 43, 521-532. \doi{10.1007/BF02293811}.
 
-Fialkowski, A. C.  (2018). SimMultiCorrData: Simulation of Correlated Data with Multiple
-Variable Types.  R package version 0.2.2. Retrieved from
+Fialkowski, A. C.  (2018). SimMultiCorrData: Simulation of Correlated Data
+with Multiple #' Variable Types.  R package version 0.2.2. Retrieved from
 https://cran.r-project.org/web/packages/SimMultiCorrData/index.html
 }

@@ -7,17 +7,18 @@ Maintainer: Kubra ATALAY KABASAKAL <katalay@hacettepe.edu.tr>
 Description: A tool to sample data with desired properties.
 License: GPL-2
 Encoding: UTF-8
-Imports: 
-    dplyr,
-    lattice,
-    psych,
-    tibble
+Imports:
+     dplyr,
+     lattice,
+     tibble,
+     psych
 Suggests: 
     rmarkdown,
     knitr,
     testthat
 LazyData: true
 RoxygenNote: 7.1.1
-URL: https://github.com/atalay-k/drawsample.git
+URL: https://github.com/atalay-k/drawsample
 Depends: 
     R (>= 2.10)
+BugReports: https://github.com/atalay-k/drawsample/issues

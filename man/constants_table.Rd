@@ -18,13 +18,16 @@ A \code{data.frame} with 5 columns, which are
 constants_table
 }
 \description{
-This table includes Fleishman's Power Method Transformation constants.
+This table includes Fleishman's Power Method
+Transformation constants.
 }
 \references{
-Fleishman AI (1978). A Method for Simulating Non-normal Distributions. Psychometrika, 43, 521-532. \doi{10.1007/BF02293811}.
+Fleishman AI (1978). A Method for Simulating Non-normal Distributions.
+Psychometrika, 43, 521-532. \doi{10.1007/BF02293811}.
 
-Fialkowski, A. C.  (2018). SimMultiCorrData: Simulation of Correlated Data with Multiple
-Variable Types.  R package version 0.2.2. Retrieved from
+Fialkowski, A. C.  (2018). SimMultiCorrData: Simulation of Correlated
+Data with Multiple Variable Types.  R package version 0.2.2. Retrieved
+from
 https://cran.r-project.org/web/packages/SimMultiCorrData/index.html
 }
 \seealso{

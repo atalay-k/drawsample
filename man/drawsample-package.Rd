@@ -6,21 +6,26 @@
 \alias{drawsample-package}
 \title{Draw Samples with the Desired Properties from a Data Set}
 \description{
-\pkg{draw_sample}, function takes a sample of the specified sample size,
-skewness, and kurtosis form a data set (dist)with or without resampling.
+\pkg{draw_sample}, function takes a sample of the specified
+sample size,#' skewness, and kurtosis form a data set (dist)with or without
+resampling.
 Fleishman's power method (\doi{10.1007/BF02293811})  was used
 for the desired skewness and kurtosis level.
 Therefore, the coefficient of skewness can be chosen between 0 and 3.6.
-Although the kurtosis coefficient varies for each skewness coefficient and varies from -1.2 and 20.
-If convenient kurtosis and skew values are not provided, no solutions can be found and an error is given.
+Although the kurtosis coefficient varies for each skewness coefficient
+and varies from -1.2 and 20.
+If convenient kurtosis and skew values are not provided,
+no solutions can be found and an error is given.
 }
 \references{
-Fleishman AI (1978). A Method for Simulating Non-normal Distributions. Psychometrika, 43, 521-532. \doi{10.1007/BF02293811}.
+Fleishman AI (1978). A Method for Simulating Non-normal Distributions.
+Psychometrika, 43, 521-532. \doi{10.1007/BF02293811}.
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/atalay-k/drawsample.git}
+  \item \url{https://github.com/atalay-k/drawsample}
+  \item Report bugs at \url{https://github.com/atalay-k/drawsample/issues}
 }
 
 }
