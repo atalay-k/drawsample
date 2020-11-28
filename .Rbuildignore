@@ -6,4 +6,7 @@
 ^pkgdown$
 ^cran-comments\.md$
 ^CRAN-RELEASE$
+<<<<<<< HEAD
 ^\.travis\.yml$
+=======
+>>>>>>> refs/remotes/origin/main

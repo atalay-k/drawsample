@@ -1,7 +1,7 @@
 Package: drawsample
 Type: Package
 Title: Draw Samples with the Desired Properties from a Data Set
-Version: 0.1.0.9000
+Version: 0.1.1
 Author: Kubra Atalay Kabasakal <katalay@hacettepe.edu.tr>
 Maintainer: Kubra Atalay Kabasakal <katalay@hacettepe.edu.tr>
 Description: A tool to sample data with the desired properties.Samples can be 
