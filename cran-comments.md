@@ -7,6 +7,4 @@
 
 0 errors | 0 warnings | 1 note
 
-* ## Resubmission
-* This is a resubmission.I fix the Description File.
-
+* This is a new release.
