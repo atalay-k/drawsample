@@ -1,0 +1,72 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# drawsample
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of drawsample is to sample data with the desired properties.Samples can be drawn by purposive sampling with determining distributional 
+    conditions, such as deviation from normality (skewness and kurtosis), 
+    and sample size in quantitative research studies.
+
+## Installation
+
+You can install the released version of drawsample from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("drawsample")
+```
+
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("atalay-k/drawsample")
+```
+## Example
+
+examples for 'draw_sample()'
+
+```{r example 1}
+library(drawsample)
+#'# Draw a sample based on Score_1(from negatively skewed to normal)
+draw_sample(dist=example_data[,c(1,2)],n=200,skew = 0,kurts = 0,
+output_name = c("sample", "1"))
+# Draw a sample based on Score_2 (from negatively skewed to positively skewed)
+draw_sample(dist=example_data[,c(1,3)],n=200,skew = 1,kurts = 1,
+output_name = c("sample", "2"))
+# Draw a sample based on Score_2 (from negatively skewed to positively skewed
+# with replacement)
+draw_sample(dist=example_data[,c(1,3)],n=200,skew = 0.5,kurts = 0.4,
+replacement=TRUE,output_name = c("sample", "3"))
+
+```
+
+examples for 'draw_sample_n()'
+
+```{r example 2}
+# Draw a sample based on Score_1
+draw_sample_n(dist=example_data[,c(1,2)],n=200,skew = 0,kurts = 0, location=0, delta_var=0,output_name = c("sample", "4"))
+# Draw a sample based on Score_2 (location par)
+draw_sample_n(dist=example_data[,c(1,3)],n=200,skew = 1,kurts = 1,location=-0.5,delta_var=0,output_name = c("sample", "5"))
+# Draw a sample based on Score_2 (delta_var par)
+draw_sample_n(dist=example_data[,c(1,3)],n=200,skew = 0.5,kurts = 0.4,location=0,delta_var=0.3,output_name = c("sample", "6"))
+
+```
+
+You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/master/examples>.
+
+Y
