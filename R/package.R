@@ -14,6 +14,14 @@
 #'
 #' @references
 #' Fleishman AI (1978). A Method for Simulating Non-normal Distributions.
-#' Psychometrika, 43, 521-532. \doi{10.1007/BF02293811}.
+#'  \emph{Psychometrika, 43, 521-532.} \doi{10.1007/BF02293811}.
+#'  
+#' Atalay Kabasakal, K. & Gunduz, T . (2020). Drawing a Sample with Desired Properties from 
+#' Population in R Package “drawsample”.\emph{Journal of Measurement and Evaluation in Education 
+#' and Psychology,11}(4),405-429. \doi{10.21031/epod.790449}
 #' @docType package
 "_PACKAGE"
+
+
+## quiets concerns of R CMD check re: the .'s that appear in pipelines
+if(getRversion() >= "2.15.1")  utils::globalVariables(c("."))

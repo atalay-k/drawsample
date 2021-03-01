@@ -1,12 +1,2 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^README\.Rmd$
-^_pkgdown\.yml$
-^docs$
-^pkgdown$
-^cran-comments\.md$
-^CRAN-RELEASE$
-<<<<<<< HEAD
-^\.travis\.yml$
-=======
->>>>>>> refs/remotes/origin/main

@@ -19,13 +19,26 @@ no solutions can be found and an error is given.
 }
 \references{
 Fleishman AI (1978). A Method for Simulating Non-normal Distributions.
-Psychometrika, 43, 521-532. \doi{10.1007/BF02293811}.
+ \emph{Psychometrika, 43, 521-532.} \doi{10.1007/BF02293811}.
+ 
+Atalay Kabasakal, K. & Gunduz, T . (2020). Drawing a Sample with Desired Properties from 
+Population in R Package “drawsample”.\emph{Journal of Measurement and Evaluation in Education 
+and Psychology,11}(4),405-429. \doi{10.21031/epod.790449}
 }
 \seealso{
 Useful links:
 \itemize{
   \item \url{https://github.com/atalay-k/drawsample}
   \item Report bugs at \url{https://github.com/atalay-k/drawsample/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Kubra Atalay Kabasakal \email{katalay@hacettepe.edu.tr} (\href{https://orcid.org/0000-0002-3580-5568}{ORCID})
+
+Other contributors:
+\itemize{
+  \item Huseyin Yıldız \email{huseyinyildiz35@gmail.com} (\href{https://orcid.org/0000-0003-2387-263X}{ORCID}) [contributor]
 }
 
 }

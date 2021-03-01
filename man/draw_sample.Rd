@@ -63,9 +63,13 @@ data(example_data)
 }
 \references{
 Fleishman AI (1978). A Method for Simulating Non-normal Distributions.
-Psychometrika, 43, 521-532. \doi{10.1007/BF02293811}.
+ \emph{Psychometrika, 43, 521-532.} \doi{10.1007/BF02293811}.
 
 Fialkowski, A. C.  (2018). SimMultiCorrData: Simulation of Correlated Data
 with Multiple #' Variable Types.  R package version 0.2.2. Retrieved from
 https://cran.r-project.org/web/packages/SimMultiCorrData/index.html
+
+Atalay Kabasakal, K. & Gunduz, T. (2020). Drawing a Sample with Desired Properties from 
+Population in R Package “drawsample”.\emph{Journal of Measurement and Evaluation in Education 
+and Psychology,11}(4),405-429. \doi{10.21031/epod.790449}
 }
