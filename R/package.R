@@ -1,8 +1,8 @@
 #' @title  Draw Samples with the Desired Properties from a Data Set
 #'
 #'
-#' @description \pkg{draw_sample}, function takes a sample of the specified
-#' sample size,#' skewness, and kurtosis form a data set (dist)with or without
+#' @description \pkg{draw_sample}, functions take a sample of the specified
+#' sample size,skewness, and kurtosis form a data set (dist)with or without
 #' resampling.
 #' Fleishman's power method (\doi{10.1007/BF02293811})  was used
 #' for the desired skewness and kurtosis level.
@@ -21,6 +21,7 @@
 #' and Psychology,11}(4),405-429. \doi{10.21031/epod.790449}
 #' @docType package
 "_PACKAGE"
+NULL
 
 
 ## quiets concerns of R CMD check re: the .'s that appear in pipelines

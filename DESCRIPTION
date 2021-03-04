@@ -1,7 +1,7 @@
 Package: drawsample
 Type: Package
 Title: Draw Samples with the Desired Properties from a Data Set
-Version: 1.0.0
+Version: 1.0.1
 Language: en-US
 Authors@R: c(person(given = "Kubra",
                     family = "Atalay Kabasakal",

@@ -1,5 +1,5 @@
 #'
-#' Draw Samples with the Desired Properties from a Data Set
+#' Draw Samples with the Desired Properties from a Data Set (Nearest)
 #'
 #' A function to sample data with desired properties.
 #' @param dist         data frame:consists of id and scores with no missing
