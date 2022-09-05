@@ -9,7 +9,7 @@ citEntry(
   volume   = "11",
   number   = "4",,
   pages    = "405-429",
-  url      = "10.21031/epod.790449",
+  url      = "https://dergipark.org.tr/en/pub/epod/issue/58509/790449",
  textVersion = "Atalay Kabasakal, K. & Gunduz, T . (2020). Drawing a Sample with Desired Properties from Population in R Package “drawsample”.Journal of Measurement and Evaluation in Education and Psychology,11(4),405-429. doi:10.21031/epod.790449"
   )
 

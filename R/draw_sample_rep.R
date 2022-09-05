@@ -51,7 +51,7 @@ draw_sample_rep <- function(dist,n,rep=1,skew,kurts,replacement =TRUE,
     skip_to_next <- FALSE
     tryCatch({
       set.seed(sample(1:10000,1))
-      result_1 <- drawsample::draw_sample_n_ir(dist =dist, n = n,
+      result_1 <- draw_sample_n_ir(dist =dist, n = n,
                                            skew=skew,kurts=kurts,
                                            col_id=col_id,col_total=col_total,
                                            output_name = c("sample",paste(i))) },
@@ -69,7 +69,7 @@ draw_sample_rep <- function(dist,n,rep=1,skew,kurts,replacement =TRUE,
       skip_to_next <- FALSE
       tryCatch({
         set.seed(sample(1:10000,1))
-        result_1 <- drawsample::draw_sample_ir(dist =dist, n = n,
+        result_1 <- draw_sample_ir(dist =dist, n = n,
                                                  skew=skew,kurts=kurts, replacement =FALSE,
                                                  col_id=col_id,col_total=col_total,
                                                  output_name = c("sample",paste(i))) },

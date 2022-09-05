@@ -55,6 +55,7 @@ The execution of the function may take some time since it tries to obtain
 the specified value for skewness and kurtosis.
 }
 \examples{
+\dontrun{
 # Example data provided with package
 data(likert_example)
 # First 6 rows of the example_data
@@ -68,7 +69,6 @@ output3$desc
 head(output3$sample)
 # Histogram of the given data set and drawn sample
 output3$graph
-\dontrun{
 # Draw a sample based on total(from flattened to normal)
 draw_sample_ir(dist=likert_example,n=200,skew = 0.5,kurts =0.5,
 col_id=1,col_total=7,save.output = TRUE,
