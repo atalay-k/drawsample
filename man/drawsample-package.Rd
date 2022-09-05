@@ -4,7 +4,7 @@
 \name{drawsample-package}
 \alias{drawsample}
 \alias{drawsample-package}
-\title{Draw Samples with the Desired Properties from a Data}
+\title{Draw Samples with the Desired Properties from a Data Set}
 \description{
 \pkg{draw_sample}, functions take a sample of the specified
 sample size,skewness, and kurtosis form a data set (dist)with or without

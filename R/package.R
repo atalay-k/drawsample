@@ -1,4 +1,4 @@
-#' @title  Draw Samples with the Desired Properties from a Data
+#' Draw Samples with the Desired Properties from a Data Set
 #'
 #'
 #' @description \pkg{draw_sample}, functions take a sample of the specified
@@ -21,7 +21,6 @@
 #' and Psychology,11}(4),405-429. \doi{10.21031/epod.790449}
 #' @docType package
 "_PACKAGE"
-NULL
 
 
 ## quiets concerns of R CMD check re: the .'s that appear in pipelines

@@ -13,7 +13,6 @@
 #' @param output_name character: a vector of two components.
 #'                    The first component is the name of the output file,
 #'                    user can change the second component.
-#'
 #' @import dplyr
 #' @import lattice
 #' @import tibble
