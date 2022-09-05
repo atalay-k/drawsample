@@ -1,0 +1,99 @@
+#'
+#' Sample data close to desired characteristics with individual responses - nearest
+#' 
+#'
+#' A function to sample data with desired properties.
+#' 
+#' @param dist           data frame:consists of id and scores with no missing
+#' @param n              numeric: desired sample size
+#' @param skew           numeric: the skewness value
+#' @param kurts          numeric: the kurtosis value
+#' @param location       numeric: the value for adjusting mean (default is 0).
+#' @param delta_var      numeric: the value for adjusting variance (default is 0).
+#' @param col_id        index of column ID's
+#' @param col_total     index of column total score 
+#' @param save.output    logical: should the output be saved into a text file? (Default is FALSE).
+#' @param output_name    character: a vector of two components.
+#'                       The first component is the name of the output file,
+#'                       user can change the second component.
+#'
+#'
+#' @import dplyr
+#' @import lattice
+#' @import tibble
+#' @importFrom psych describe
+#' @importFrom grDevices dev.off
+#' @importFrom graphics hist
+#' @importFrom stats na.omit rnorm
+#' @importFrom utils capture.output
+#' @return This function returns a \code{list} including following:
+#' \itemize{
+#' \item a matrix: Descriptive statistics of the given data,
+#'                 the reference vector and the sample.
+#' \item a data frame: The id's and scores of the sample
+#' \item graph: Histograms for the “data” and the “sample”
+#' }
+#' @details
+#' The desired skewness and kurtosis values cannot be met while the function 
+#' execution is faster. The attributes of kurtosis are in doubt.
+#'  This is because the range of kurtosis is greater than the skewness.
+#'  
+#' @references
+#' Fleishman AI (1978). A Method for Simulating Non-normal Distributions.
+#'  \emph{Psychometrika, 43, 521-532.} \doi{10.1007/BF02293811}.
+#'
+#' Fialkowski, A. C.  (2018). SimMultiCorrData: Simulation of Correlated Data
+#' with Multiple #' Variable Types.  R package version 0.2.2. Retrieved from
+#' https://cran.r-project.org/web/packages/SimMultiCorrData/index.html
+#' 
+#' Atalay Kabasakal, K. & Gunduz, T. (2020). Drawing a Sample with Desired Properties from 
+#' Population in R Package “drawsample”.\emph{Journal of Measurement and Evaluation in Education 
+#' and Psychology,11}(4),405-429. \doi{10.21031/epod.790449}
+#' @export
+#' @examples
+#' # Example data provided with package
+#' data(likert_example)
+#' # First 6 rows of the example_data
+#' head(likert_example)
+#' # Draw a sample based on Score_1(from negatively skewed to normal)
+#' output4 <- draw_sample_n_ir(dist=likert_example,n=200,skew = 0,kurts = 0,
+#' location= 0,delta_var = 0,
+#' col_id=1,col_total=7,save.output=FALSE) # Histogram of the reference data set
+#' # descriptive statistics of the given data,reference data, and drawn sample
+#' output4$desc
+#' # First 6 rows of the drawn sample
+#' head(output4$sample)
+#' # Histogram of the given data set and drawn sample
+#' output4$graph
+#'\dontrun{
+#' output4 <- draw_sample_n_ir(dist=likert_example,n=200,skew = 0.5,kurts = 0.5,
+#' location= 0,delta_var = 0,
+#' col_id=1,col_total=7,save.output=TRUE,
+#' output_name = c("sample", "1")) 
+#'}
+draw_sample_n_ir <-  function(dist,n,skew,kurts,
+                                 location= 0,
+                                 delta_var = 0,
+                                  col_id=1,col_total=numeric(),save.output = FALSE,
+                                  output_name = c("sample","default")){
+  
+
+  dist_v2 <- data.frame(dist[,col_id],dist[,ncol(dist)])
+  
+  
+  
+  output <- draw_sample_n(dist = dist_v2,n=n,skew = skew,
+                        kurts = kurts,
+                        location=location, delta_var=delta_var,
+                        output_name = output_name)
+  
+  names(dist)[col_id] <- "id"
+  output$sample <- dist %>%  filter(id %in%  output$sample$id)
+  
+
+  return(output)
+}
+
+
+
+
